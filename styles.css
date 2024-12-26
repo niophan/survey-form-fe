@@ -1,0 +1,160 @@
+body {
+  padding: 5px;
+  color: #082213;
+  font-size: 15px;
+  font-family: 'Futura', sans-serif;
+  position: relative;
+  display: block;
+}
+
+body::before {
+  content: "";
+  background: #ebf2fa;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  background: url(https://images.unsplash.com/photo-1535982330050-f1c2fb79ff78?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+}
+
+p {
+  padding: 0;
+  margin: 5px auto;
+}
+
+form {
+  background: #427aa1;
+  margin: 1.2rem auto;
+  width: 80%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+#feedback-container {
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 90%;
+  padding: 1rem;
+}
+
+.feedback-table {
+  table-layout: auto;
+}
+
+.feedback-table th,
+.feedback-table td {
+  border: 1px solid #ebf2fa;
+  text-align: center;
+  padding: 1rem;
+}
+
+.feedback-table th {
+  background-color: #ebf2fa;
+}
+
+.feedback-table td input[type="radio"] {
+        transform: scale(1.2);
+        cursor: pointer;
+}
+
+label {
+  display: block;
+  margin: 0.4rem auto;
+}
+
+label[for="true"], label[for="false"] {
+  display: inline;
+}
+
+input[type="text"], input[type="email"] {
+  width: 20rem;
+}
+
+textarea {
+  width: 20rem;
+}
+
+#submit {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (min-width: 320px) {
+  textarea, input[type="text"], input[type="email"] {
+    max-width: 280px;
+  }
+  #feedback-container {
+    overflow-x: auto;
+    display: block;
+  }
+  .feedback-table th,
+  .feedback-table td {
+    padding: 0;
+  }
+  .feedback-table {
+    font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 481px) {
+  textarea, input[type="text"], input[type="email"] {
+    max-width: 460px;
+  }
+  #feedback-container {
+    overflow-x: auto;
+    display: block;
+    padding: 3px;
+  }
+  .feedback-table th,
+  .feedback-table td {
+    padding: 3px;
+  }
+  .feedback-table {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 769px) {
+  textarea, input[type="text"], input[type="email"] {
+    max-width: 720px;
+  }
+  #feedback-container {
+    overflow-x: auto;
+    display: block;
+    padding: 7px;
+  }
+  .feedback-table th,
+  .feedback-table td {
+    padding: 7px;
+  }
+  .feedback-table {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1025px) {
+    textarea, input[type="text"], input[type="email"] {
+    max-width: 1000px;
+  }
+}
+

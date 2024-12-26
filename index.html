@@ -1,0 +1,147 @@
+<DOCTYPE!>
+<html lang="fi">
+  <head>
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Kurssiohjaajan palauteet</h1>
+      <p id="description">Anna palautetta kurssiohjaajastasi.</p>
+    </header>
+
+    <form id="survey-form">
+      <div id="container">
+        <label id="name-label"  for="name">Opiskelijan ryhmä</label>
+        <input id="name" name="name" type="text" maxlength="8" placeholder="esim. 24TIETOB" required>
+        <p><small>8-numeroinen opiskelijantunnus</small></p>
+      </div>
+
+      <div id="container">
+        <label id="email-label" for="email">Opiskelijan sähköpostiosoite</label>
+        <input id="email" type="email" name="email" placeholder="esim. opiskelija@tuni.fi" required>
+      </div>
+
+      <div id="container">
+        <label id="course-label" for="course">Kurssitunnus tai kurssin nimi</label>
+        <input id="course" type="text" name="course" placeholder="esim. 5N00FX72-xxxx" required>
+      </div>
+
+      <div id="container">
+        <label id="number-label" for="number ">Kurssin opintopisteet</label>
+        <input id="number" type="number" name="number" min="1" max="35" placeholder="5">
+      </div>
+
+      <div id="container">
+        <label id="teacher-label" for="teacher">Ohjaajan nimi</label>
+        <input id="teacher" type="text" name="teacher" required>
+      </div>
+
+      <div id="feedback-container">
+        <table class="feedback-table">
+          <thead>
+            <tr>
+              <th>Palaute</th>
+              <th>Vahvasti samaa mieltä</th>
+              <th>Samaa mieltä</th>
+              <th>Neutraali</th>
+              <th>Eri mieltä</th>
+              <th>Vahvasti eri mieltä</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ohjaaja vastasi viiveettä kysymyksiin	</td>
+              <td><input type="radio" name="feedback1" value="strongly-agree"></td>
+              <td><input type="radio" name="feedback1" value="agree"></td>
+              <td><input type="radio" name="feedback1" value="neutral"></td>
+              <td><input type="radio" name="feedback1" value="disagree"></td>
+              <td><input type="radio" name="feedback1" value="strongly-disagree"></td>
+            </tr>
+            <tr>
+              <td>Ohjaaja palautti tarkastetut tehtävät ja antoi palautetta viiveettä	</td>
+              <td><input type="radio" name="feedback2" value="strongly-agree"></td>
+              <td><input type="radio" name="feedback2" value="agree"></td>
+              <td><input type="radio" name="feedback2" value="neutral"></td>
+              <td><input type="radio" name="feedback2" value="disagree"></td>
+              <td><input type="radio" name="feedback2" value="strongly-disagree"></td>
+            </tr>
+            <tr>
+              <td>Ohjaaja käytti tehokkaita opetusmenetelmiä</td>
+              <td><input type="radio" name="feedback3" value="strongly-agree"></td>
+              <td><input type="radio" name="feedback3" value="agree"></td>
+              <td><input type="radio" name="feedback3" value="neutral"></td>
+              <td><input type="radio" name="feedback3" value="disagree"></td>
+              <td><input type="radio" name="feedback3" value="strongly-disagree"></td>
+            </tr>
+            <tr>
+              <td>Kurssin arviointikriteerit ilmoitettiin selkeästi kurssin alussa</td>
+              <td><input type="radio" name="feedback4" value="strongly-agree"></td>
+              <td><input type="radio" name="feedback4" value="agree"></td>
+              <td><input type="radio" name="feedback4" value="neutral"></td>
+              <td><input type="radio" name="feedback4" value="disagree"></td>
+              <td><input type="radio" name="feedback4" value="strongly-disagree"></td>
+            </tr>
+            <tr>
+              <td>Kurssi vastasi ilmoitettua sisältöä ja tavoitteita</td>
+              <td><input type="radio" name="feedback5" value="strongly-agree"></td>
+              <td><input type="radio" name="feedback5" value="agree"></td>
+              <td><input type="radio" name="feedback5" value="neutral"></td>
+              <td><input type="radio" name="feedback5" value="disagree"></td>
+              <td><input type="radio" name="feedback5" value="strongly-disagree"></td>
+            </tr>
+            <tr>
+              <td>Uskon, että kurssilla oppimani asiat ovat minulle hyödyllisiä tulevaisuudessa</td>
+              <td><input type="radio" name="feedback6" value="strongly-agree"></td>
+              <td><input type="radio" name="feedback6" value="agree"></td>
+              <td><input type="radio" name="feedback6" value="neutral"></td>
+              <td><input type="radio" name="feedback6" value="disagree"></td>
+              <td><input type="radio" name="feedback6" value="strongly-disagree"></td>
+            </tr>
+            <tr>
+              <td>Suosittelisinko kurssia muille	</td>
+              <td><input type="radio" name="feedback7" value="strongly-agree"></td>
+              <td><input type="radio" name="feedback7" value="agree"></td>
+              <td><input type="radio" name="feedback7" value="neutral"></td>
+              <td><input type="radio" name="feedback7" value="disagree"></td>
+              <td><input type="radio" name="feedback7" value="strongly-disagree"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="container">
+      <label for="dropdown">Kokokurssin tyytyväisyys:</label>
+      <select id="dropdown" name="dropdown">
+        <option disabled selected>Ei peusteita vastata</option>
+        <option>Välttävää</option>
+        <option>Tyydyttävää</option>
+        <option>Hyvää</option>
+        <option>Erittäin hyvää</option>
+        <option>Erinomaista</option>
+      </select>
+      </div>
+      
+      <div id="container">
+        <p>Palautettani voidaan käsitellä ja siitä voidaan muodostaa yhteenveto, vaikka alle 5 opiskelijaa on antanut palautetta (*)</p>
+        <input type="checkbox" name="true" value="true">
+        <label for="true">Kyllä</label>
+        <br>
+        <input type="checkbox" name="false" value="false">
+        <label for="false">Ei</label>
+      </div>
+
+      <div id="container">
+        <label for="review">Mikä kurssilla oli hyvää? Mikä edisti oppimistasi?</label>
+        <textarea id="review" name="review" rows="4" cols="30" max="5000" placeholder="Anna palauttesi">
+        </textarea>
+      </div>
+      <div id="container">
+        <input id ="submit" type="submit" value="Submit">
+      </div>
+    </form>
+  </body>
+
+</html>
